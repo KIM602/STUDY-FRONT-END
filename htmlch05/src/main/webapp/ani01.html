@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>animation</title>
+<style>
+@keyframes textColorAnimation { /* @keyframes 규칙이름 */
+	/* css스타일 문법 형식(셀렉터 {속성 : 속성 이름;}) */
+	0% {color : blue;}
+	30% {color : green;}
+	100% {color : red;}
+}
+span {
+	font-family: "arial black";
+	animation-name : textColorAnimation; /* 애니메이션 이름 */
+	animation-duration : 5s; /* 주기 */
+	animation-iteration-count : infinite;
+}
+</style>
+</head>
+<body>
+<p><span>span</span> 텍스트를 5초에 blue, green, red로 무한반복합니다.</p>
+</body>
+</html>

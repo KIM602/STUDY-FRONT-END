@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>ex09-04</title>
+<script type="text/javascript">
+let p;
+function init() {
+	p= document.getElementById("p");
+	p.onmouseover = function() { // DOM의 이벤트리스너 속성으로 처리하면서 익명의 ㅎ함수 사용
+		this.style.backgroundColor = "orchid";
+	}
+	p.addEventListener("mouseout",function(){ // addEventListener(이벤트이름,익명의 함수)사용시 익명의 함수 직접 만듬
+		this.style.backgroundColor="white";
+	});	
+}
+</script>
+</head>
+<body onload="init()">
+<h3>익명함수로 이벤트 리스너 작성</h3>
+<hr/>
+<p id="p">마우스 올리면 orchid 색으로 변경</p>
+</body>
+</html>

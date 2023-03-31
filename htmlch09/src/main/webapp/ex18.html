@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex09-18</title>
+<script>
+let sum = 0;
+function calc(cBox) {
+	if(cBox.checked) { //체크박스가 선택된 상태
+		sum += parseInt(cBox.value); //선택된 체크박스의 속성값은 문자열임
+	}
+	else
+		sum -= parseInt(cBox.value);
+	document.getElementById("sumtext").value=sum;
+}
+let sum1 = 0;
+function calc1(cBox) {
+	if(cBox.checked) { //체크박스가 선택된 상태
+		sum1 += parseInt(cBox.value); //선택된 체크박스의 속성값은 문자열임
+	}
+	else
+		sum1 -= parseInt(cBox.value);
+	document.getElementById("sumtext1").value=sum1;
+}
+</script>
+</head>
+<body>
+
+<h3>물품을 선택하면 금액이 자동 계산됩니다.(checkbox나 radio는 onclick이나 onchange이벤트 모두 가능)</h3>
+<hr/>
+<form>
+	<input type="checkbox" name="hap" value="10000" onclick="calc(this)"/>모자 1만원
+	<input type="checkbox" name="shose" value="30000" onclick="calc(this)"/>구두 3만원
+	<input type="checkbox" name="bag" value="80000" onclick="calc(this)"/>명품가방 8만원<br>
+	지불하실 금액 <input type="text" id="sumtext" value="0">
+</form>
+<hr/>
+<form>
+	<input type="checkbox" name="hap" value="10000" onchange="calc1(this)"/>모자 1만원
+	<input type="checkbox" name="shose" value="30000" onchange="calc1(this)"/>구두 3만원
+	<input type="checkbox" name="bag" value="80000" onchange="calc1(this)"/>명품가방 8만원<br>
+	지불하실 금액 <input type="text" id="sumtext1" value="0">
+</form>
+</body>
+</html>

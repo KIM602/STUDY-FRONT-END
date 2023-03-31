@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Quiz1</title>
+<style>
+h3 {
+	text-align : center;
+	color : blue;
+}
+.nav1 {
+	background : yellow;
+	list-style-type : none;
+	text-align : center;
+	margin : 0px;
+	padding : 0px;
+}
+.nav1 > li {
+	display : inline-block;
+	font-size : 20px;
+	padding : 20px;
+}
+.relative {
+	position : relative; /* default인 static시의 위치를 기준으로 배치 */
+	width : 400px;
+	height : 200px;
+	border : 3px solid #73AD21
+}
+.absolute {
+	position : absolute;
+	top : 80px;
+	right : 0px;
+	width : 200px;
+	height : 100px;
+	border : 3px solid #73AD21
+}
+#auto {
+	background : coral;
+	width : 200px;
+	height : 65px;
+	border : 1px dotted black;
+	overflow : auto;
+}
+</style>
+</head>
+<body>
+
+<h3>수평 메뉴바 만들어보기</h3>
+<hr/>
+<ul class="nav1">
+	<li><a href="#home">Home</a></li>
+	<li><a href="#about">About Us</a></li>
+	<li><a href="#clients">Our Clients</a></li>
+	<li><a href="#contact">Contact Us</a></li>
+</ul>
+
+<h3>태그 엘리먼트 위치 조정</h3>
+<hr/>
+<div class="relative">This div element has position: relative;
+	<div class="absolute">This div element has position: absolute;</div>
+</div>
+
+<h3>오버플로우</h3>
+<hr/>
+<div id="auto">You can use the overflow property when you want to have better control of the layout.
+ The overflow property specifies what happens if content overflows an element's box.
+</div>
+</body>
+</html>
+
+<!--
+1. h3을 파란색으로 중앙에 배치하기
+2. nav1클래스에 대한 스타일을 배경색은 yellow, 마커는 없앰(list-style-type : none), 글자는 중앙정렬, 마진과 패딩은 0으로 함
+3. 클래스 nav의 후손인 li에 대해 일렬배치가 되도록 프로퍼티를 주고 글자크기는 20px, 내부여백은 20px로 줌
+4. class="relative"의 스타일을 상대적인 위치 속성, 크기는 400 x 200, 테두리는 두께 3 실선 #73AD21로 줌
+    class="absolute"의 스타일은 절대위치, 위로부터 거리는 80px 오른쪽은 0, 크기는 200 x 100, 테두리는 위와 동일
+5. id="auto"의 스타일을 배경색은 coral, 크기는 200 x 65, 테두리는 1px 점선 검정색, 오버플로우 처리는 auto로 함
+ -->

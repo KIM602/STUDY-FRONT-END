@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex05-02</title>
+<style>
+/* position 속성이 없으면 디폴트인 static임 */
+div {
+	display : inline-block; /* 일렬배치 및 크기조정 가능 */
+	height : 50px;
+	width : 50px;
+	border : 1px solid Lightgray;
+	text-align : center;
+	color : white;
+	background : red;
+}
+#down:hover {
+	position : relative; /* static시 위치를 기준으로 이동 */
+	left : 20px; /* left를 기준으로 오른쪽 거리 */
+	top : 20px; /* top을 기준으로 아랫쪽으로 거리*/
+	background : green;
+}
+#up:hover {
+	position : relative;
+	right : 20px; /* right를 기준으로 왼쪽 거리 */
+	bottom : 20px; /* bottom을 기준으로 위로 거리 */
+	background : green;
+}
+</style>
+</head>
+<body>
+
+<h3>상대 배치, relative</h3>
+<hr/>
+
+<div>T</div>
+<div id="down">h</div>
+<div>a</div>
+<div>n</div>
+<div id="up">k</div>
+<div>s</div>
+</body>
+</html>

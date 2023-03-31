@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+<title>Form</title>
+<!--bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--popper jquery-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!--latest javascript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h2 class="text-center">수직배치 form</h2>
+	<form action="#" method="post">
+		<div class="form-group"> <!-- label과 입력창을 묶어주는 form-group클래스 -->
+			<label for="email">Email:</label>
+			<!-- form-control클래스는 full-width 즉, 블록레벨 -->
+			<input class="form-control" id="email" type="email"  placeholder="Enter email" name="email"/>
+		</div>
+		<div class="form-group"> <!-- label과 입력창을 묶어주는 form-group클래스 -->
+			<label for="pwd">Email:</label>
+			<!-- form-control클래스는 full-width 즉, 블록레벨 -->
+			<input class="form-control" id="pwd" type="email"  placeholder="Enter email" name="pswd"/>
+		</div>
+		<div class="form-group form-check"> <!-- checkbox는 form-check클래스 추가 -->
+			<label class="form-check-label"> <!-- form-check-label클래스 -->
+				<input class="form-check-input" type="checkbox" name="remember" />Remember me
+				<!-- form-control대신 form-check-input사용 -->
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+<br /><br />
+<div class="container">
+	<h2 class="text-center">수평배치 form</h2>
+	<!-- 수평배치시 form-inline클래스를 form에 줌, form-group은 사용하지 않고 일반 label과 input방식 사용-->
+	<form class="form-inline justify-content-around" action="#" method="post">
+		<label for="email"	 class="mx-2">Email: </label>
+		<input type="email" class="form-control mx-2" id="email" placeholder="Enter email" name="email" />
+		<label for="pwd">Password: </label>
+		<input type="password" class="form-control mx-2" id="pwd" placeholder="Enter password" name="pswd" />
+		<div class="form-check">
+			<label class="form-check-labe">
+				<input class="form-check-input mx-2" type="checkbox" name="remember" />Remember me
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary mx-2">Submit</button>
+	</form>
+</div>
+
+<br /><br />
+<div class="container">
+	<h2>Form Grid</h2>
+	<form>
+		<!-- 하나의 row안에 2개의 col이 있으므로 그리드 12개를 균등 분배하여 6개씩 차지 -->
+		<div class="row"> <!-- 줄을 만드는 클래스 -->
+			<div class="col"> <!-- 칸을 만드는 클래스 그리드로 처리 -->
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name="email" />
+			</div>
+			<div class="col"> <!-- 칸을 만드는 클래스 그리드로 처리 -->
+				<input type="password" class="form-control"  placeholder="Enter password" name="pswd" />
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary mt-3">Submit</button>
+	</form>
+</div>
+
+<br /><br />
+<div class="container">
+	<h2>Form Grid(form-row사용)</h2>
+	<form>
+		<div class="form-row"> <!-- 줄을 만드는 클래스로 컬럼간 간격을 줄임 -->
+			<div class="col"> <!-- 칸을 만드는 클래스 그리드로 처리 -->
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name="email" />
+			</div>
+			<div class="col"> <!-- 칸을 만드는 클래스 그리드로 처리 -->
+				<input type="password" class="form-control"  placeholder="Enter password" name="pswd" />
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary mt-3">Submit</button>
+	</form>
+</div>
+
+<br /><br />
+<div class="container">
+	<h2>Form Validation</h2>
+	<form action="#" class="was-validated"> <!-- submit전 체크 -->
+		<div class="form-group">
+			<label for="uname">Username</label>
+			<input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required />
+			<div class="valid-feedback">Valid.</div> <!-- 체크시 입력이 타당하지 않을 때 보이는 엘리먼트 (빨간색) -->
+			<div class="invalid-feedback">Please fill out this field.</div> <!-- 체크시 입력이 타당할 때 보이는 엘리먼트 (흑색) -->
+		</div>
+		<div class="form-group form-check"><!-- checkbox나 radio시 form-check 추가 -->
+			<label class="form-check-Label">
+				<input class="form-check-input" type="checkbox" name="remember" required /> I agree on blabla.
+				<a class="valid-feedback">Valid.</a>
+				<a class="invalid-feedback">Check this checkbox to continue.</a>
+			</label>
+		</div>
+	<button type="submit" class="btn btn-primary mt-3">Submit</button>
+	</form>
+</div>
+
+<br /><br />
+<div class="container">
+	<h2>Form Validation(submit 후)</h2>
+	<form action="#" class="needs-validated" novalidate> 
+	<!-- needs-validation은 스크립트에서 처리 필요 -->
+		<div class="form-group">
+			<label for="uname">Username</label>
+			<input type="text" class="form-control" id="uname1" placeholder="Enter username" name="uname1" required />
+			<div class="valid-feedback">Valid.</div> <!-- 체크시 입력이 타당하지 않을 때 보이는 엘리먼트 (빨간색) -->
+			<div class="invalid-feedback">Please fill out this field.</div> <!-- 체크시 입력이 타당할 때 보이는 엘리먼트 (흑색) -->
+		</div>
+		<div class="form-group form-check"><!-- checkbox나 radio시 form-check 추가 -->
+			<label class="form-check-Label">
+				<input class="form-check-input" type="checkbox" name="remember" required /> I agree on blabla.
+				<a class="valid-feedback">Valid.</a>
+				<a class="invalid-feedback">Check this checkbox to continue.</a>
+			</label>
+		</div>
+	<button type="submit" class="btn btn-primary mt-3">Submit</button>
+	</form>
+</div>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+</body>
+</html>

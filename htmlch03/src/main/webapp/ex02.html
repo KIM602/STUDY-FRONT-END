@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex03-02</title>
+
+<style>
+#fig1 {
+	border : 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h3>figure 태그 활용</h3>
+<hr/>
+<!-- figure태그는 시맨틱 블록태그로 그림 제목 설명, 그림 등을 하나로 묶어서 처리  -->
+<!-- 약간의 마진을 갖는 블록 -->
+<figure id="fig1"> <!-- id는 시작태그의 속성(attr)으로 유일하게 구분하기 위한 목적 -->
+	<figcaption>alert() 함수 활용</figcaption> <!-- 그림 제목 -->
+	<pre>
+		<code>function f() {alert("경고합니다");}</code>
+	</pre>
+	<small>실행결과</small>
+	<pre>
+		<img src="media/alert.png" alt="실행결과">
+	</pre>
+</figure>
+</body>
+</html>

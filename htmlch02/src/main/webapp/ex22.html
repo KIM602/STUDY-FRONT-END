@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex02-22</title>
+</head>
+<body>
+
+<h3>2개의 &lt;iframe&gt;을 가집니다.</h3>
+<hr/>
+
+<iframe src="ex01.html" width="200" height="150" style="border:1px solid red;">
+브라우저가 구형이어서 iframe을 지원 못하네요(지원할 시는 이 부분을 실행 안함)
+</iframe>
+<iframe src="ex02.html"  width="200" height="100">
+브라우저가 수형이어서 iframe을 지원 못하네요
+</iframe>
+<br/><br/>
+<h3>외부 사이트를 iframe에서 사용</h3>
+<!-- 외부 사이트를 iframe사용시는 상대방이 거절하도록 해놓았으면 사용 못함  -->
+<iframe src="http://www.etnews.com" neam="upper" width="300" height="300"></iframe>
+<iframe src="http://www.mk.co.kr" neam="Lower" width="300" height="300"></iframe>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+
+<title>버튼 그룹</title>
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- propper jquery -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- latest javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+	<h2>그룹화X 버튼들</h2>
+	<button type="button" class="btn btn-primary">Apple</button>
+	<button type="button" class="btn btn-primary">Samsung</button>
+	<button type="button" class="btn btn-primary">Sony</button>
+	<br/>
+
+	<h2>Button Group</h2>
+	<div class="btn-group"> <!-- 버튼을 그룹화하는 클래스, 그룹화하면 버튼이 하나로 묶인다. -->
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
+		<button type="button" class="btn btn-primary">Sony</button>
+	</div>
+	
+	<h2>Button Group(sm)</h2>
+	<div class="btn-group btn-group-sm"> <!-- 버튼의 크기는 small -->
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
+		<button type="button" class="btn btn-primary">Sony</button>
+	</div>
+	
+	<h2>Button Group(vertical)</h2>
+<!-- 	<div class="btn-group btn-group-vertical"> -->
+		<!-- 위처럼 두번 연속 작성하면 첫번째 버튼에 픽셀 밀림 발생함...  -->
+		<div class="btn-group-vertical"> <!-- 버튼 그룹을 수직배치 -->
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
+		<button type="button" class="btn btn-primary">Sony</button>
+	</div>
+	
+</div>
+
+<div class="containger">
+	<h2>Nesting Button Groups(버튼그룹 안의 버튼그룹)</h2>
+	<div class="btn-group">
+		<button type="button" class="btn btn-primary">Apple</button> <!-- 일반 버튼 -->
+		<button type="button" class="btn btn-primary">Samsung</button> <!-- 일반 버튼 -->
+		
+		<!-- dropdown을 포함하는 버튼을 만들기 위해 내부 버튼그룹 이용 -->
+		<div class="btn-group">
+			<!-- 버튼을 만드는데 dropdown메뉴를 토글하는 버튼을 만듦 -->
+			<!-- 버튼에 dropdown-toggle 클래스를 추가(토글되는 드롭다운 메뉴를 가짐) -->
+			<!-- 토글 데이터 형식을 나타내는 data-toggle속성에 종류를 사용 -->
+			<!-- 버튼에 드롭다운 메뉴를 위한 역삼각형(캐럿)표시가 있는 버튼이 만들어짐. -->
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+			
+			<!-- dropdown메뉴 각 항목은 dropdown-item클래스를 사용하며, 보통 a로 작성한다. -->
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Tablet</a>
+				<a class="dropdown-item" href="#">Smartphone</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<h2>내부버튼그룹 없이 드롭다운 메뉴 추가</h2>
+	<div class="btn-group">
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
+		<button type="button" class="btn btn-primary">Sony</button>
+		<!-- 캐럿버튼을 만듦, dropdown용 별도 버튼으로 만들기 위해 dropdown-toggle-split클래스 사용 -->
+		<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"	data-toggle="dropdown">
+			<!-- 버튼이름을 캐럿으로 만듦 -->
+			<span class="caret"></span>
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">Tablet</a>
+			<a class="dropdown-item" href="#">Smartphone</a>
+		</div>
+		
+	</div>
+</div>
+
+<div class="containger">
+	<h2>버튼그룹 2개</h2>
+	<div class="btn-group">
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
+		<button type="button" class="btn btn-primary">Sony</button>
+	</div>
+	
+	<div class="btn-group">
+		<button type="button" class="btn btn-primary">BMW</button>
+		<button type="button" class="btn btn-primary">Mercedes</button>
+		<button type="button" class="btn btn-primary">Volvo</button>
+	</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+

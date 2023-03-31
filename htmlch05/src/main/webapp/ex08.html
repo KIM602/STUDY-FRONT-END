@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex05-08</title>
+
+<style>
+p {
+	width : 15em;
+	height : 3em;
+	border : 1px solid lightgray;
+}
+.hidden {
+	overflow : hidden;
+	text-overflow : ellipsis; /* 넘치는 부분이 있음을 ...으로 표시 */
+	white-space: nowrap;
+}
+
+.visible {
+	overflow : visible;
+}
+
+.scroll {
+	overflow : scroll;
+}
+.auto {
+	overflow : auto;
+}
+
+</style>
+
+</head>
+<body>
+
+<h3>overflow 프로퍼티</h3>
+<hr>
+<p class="hidden">overflow에 hidden 값을 적용하면 박스를 넘어가는 내용이 잘려 보이지 않습니다.</p><br>
+<p class="visible">overflow에 visible 값을 적용하면 콘텐트가 박스를 넘어가서도 출력됩니다</p><br>
+<p class="scroll">overflow에 scroll 값을 적용하면 박스에 스크롤바를 붙여 출력합니다.</p><br>
+<p class="auto">overflow에 scroll 값을 적용하면 박스에 스크롤바를 넘칠 시에만 출력합니다.</p>
+</body>
+</html>

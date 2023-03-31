@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex05-09</title>
+<style>
+#menubar {
+		background : olive;
+}
+
+#menubar ul {
+	margin : 0; /* 값이 하나이면 네방향 모두 적용 */
+	padding : 0;
+	width : 600px;
+}
+
+#menubar ul li {
+	display : inline-block; /* 원래 li는 블록인데 새 줄로 넘어가지 않고 한줄에 표시 */
+	list-style-type : none; /* 마커 삭제 */
+	padding : 15px 15px; /* top=bottom=0, left=right=15px */
+}
+
+#menubar ul li a {
+	color : white;
+	text-decoration : none; /* 링크텍스트의 밑줄을 보이지않게 */
+}
+
+#menubar ul li a:hover { /* a태그 엘리먼트에 마우스를 댈 시 */
+	color : violet; /* 마우스 올라갈 때 색 */
+}
+</style>
+</head>
+<body>
+
+<h3>list의 프로퍼티</h3>
+<hr/>
+
+<nav id="menubar"> <!-- html5의 시멘틱 태그로 메뉴를 나타내는 태그(블록레벨) -->
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Espresso</a></li>
+		<li><a href="#">Cappuccino</a></li>
+		<li><a href="#">CafeLatte</a></li>
+		<li><a href="#">F.A.Q</a></li>
+	</ul>
+</nav>
+</body>
+</html>

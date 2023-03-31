@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+<title>Setter</title>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Popper Js-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- latest Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<h3>Setter 메서드들</h3>
+<hr/>
+
+<p id="test1">this is a para</p>
+<p id="test2">this is another para</p>
+
+<p>
+	Input field : <input type="text" id="test3" value="mickey mouse">
+</p>
+<p> <a href="" id="w3s">W3Schools.com</a></p>
+<p> <a href="" id="w3s1" title="some title">aaa</a></p>
+
+<button id="btn1">set Text</button>&nbsp;&nbsp;
+<button id="btn2">set HTML</button>&nbsp;&nbsp;
+<button id="btn3">set Value</button>&nbsp;&nbsp;
+<button id="btn4">set attribute</button>&nbsp;&nbsp;
+<button id="btn5">set attribute</button>&nbsp;&nbsp;
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#btn1").click(function () {
+		$("#test1").text("Hello world"); // 문자열 내용을 Hello world로 변경
+	})
+	$("#btn2").click(function () {
+		$("#test2").html("<b>Hello world</b>"); // 태그포함 문자열 내용<b> Hello world!<b/>로 변경
+	})
+	$("#btn3").click(function () {
+		$("#test3").val("Dolly duck"); // input의 value 속성값 변경
+	})
+	$("#btn4").click(function () {
+		$("#w3s").attr("href","https://www.w3schools.com/jquery/");
+		// href의 속성값을 변경
+	})
+	$("#btn5").click(function () {
+		$("#w3s1").attr({
+			"href" : "https://www.w3schools.com/jquery/",
+			"title" : "W3schools jqeury Tutorial"
+		});
+		// 다수개의 attribute를 변경시는 {} 안에 JSON문법으로 속성을 표시 { "key" : "value","key": "value"...}
+	}) 
+})
+
+</script>
+
+<h3> setter에 call back함수 적용</h3>
+<hr/>
+
+<p id="test4"> this is a <b>bold</b> para </p>
+<p id="test5"> this is another <b> bold</b> para</p>
+
+<button id="btn6">show old/new text</button>
+<button id="btn7">show old/new html</button>
+<button id="btn8">show old/new html</button>
+<p> <a href="https://www.w3schools.com" id="w3s2" title="some title">aaa</a></p>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#btn6").click(function () {
+		// callback함수는 기존의 내용을 활용시에 사용
+		$("#test4").text(function(i,origText){
+			return "old text : " + origText1 + " new text : hello world (index : "   +i +  "   )";
+		// 원래의 값과색인번호를 콜백함수로 넘겨주어 콜백함수가 리턴한 값(문자열)으로 변경
+		})
+	})	
+		
+	$("#btn7").click(function () {	
+		$("#test5").html(function(i,origText){
+			return "old text : " + origText1 + " new text : hello world (index : "   +i +  "    )";
+		// 원래의 값과색인번호를 콜백함수로 넘겨주어
+		})
+	})
+	
+	$("#btn8").click(function () {	
+		$("#w3s2").attr("href",function(i, origValue){
+			return origValue + "/jqeury/";
+		});
+		
+	})
+})
+
+
+</script>
+
+</body>
+</html>

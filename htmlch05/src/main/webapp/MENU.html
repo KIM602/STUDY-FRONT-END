@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>MENU</title>
+<style>
+#topMenu {
+	height: 30px;
+	width: 850px;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+#topMenu ul li {
+	list-style: none;
+	color: white;
+	background: #2d2d2d;
+	float: left;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+#topMenu .menuLink {
+	text-decoration: none;
+	color: white;
+	display: block;
+	width: 150px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuLink:hover {
+	color: red;
+	background: #4d4d4d;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+table {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+th, td {
+	width: 70xp;
+	padding: 10px;
+}
+th {
+	background: lightgray;
+}
+td:hover {
+	background: hotpink;
+}
+
+p {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+form {
+	border: 1px solid black;
+	background: skyblue;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+
+<nav id="topMenu">
+	<ul>
+		<li><a class="menuLink" href="#">About US</a></li>
+		<li><a class="menuLink" href="#">Ministries</a></li>
+		<li><a class="menuLink" href="#">Community</a></li>
+		<li><a class="menuLink" href="#">Locations</a></li>
+		<li><a class="menuLink" href="#">Blog</a></li>
+	</ul>
+</nav>
+
+<table>
+	<caption>
+		<h2>간식</h2>
+		<p>지금 생각나는 과자와 빵</p>
+	</caption>
+	<tr>
+		<th>과자</th>
+		<td>프레첼</td>
+		<td>감자칩</td>
+		<td>빼빼로</td>
+	</tr>
+	<tr>
+		<th>빵</th>
+		<td>단팥빵</td>
+		<td>크림빵</td>
+		<td>초코빵</td>
+	</tr>
+</table>
+
+<p>다음 정보를 입력하시오.</p>
+<form action="#" method="post" name="fo">
+아이디 : <input type = "text" name="id" size = "12" placeholder="atoz"/><br/>
+암&nbsp;&nbsp;&nbsp;호 : <input type="password" name="pwd" size="12"/><br/>
+휴대폰 번호 : <input type="text" name="phone1" size="3" maxlength="3" placeholder="010"/>
+					<input type="text" name="phone2" size="4" maxlength="4"/>
+					<input type="text" name="phone3" size="4" maxlength="4"/><br/>
+<input type="submit" value="확인"/>
+</form>
+<br/>
+
+</body>
+</html>

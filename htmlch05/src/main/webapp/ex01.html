@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex05-01</title>
+<style>
+div {
+	border : 2px solid yellowgreen;
+	color : blue;
+	background : aliceblue; /* 단축형 background-color, background-image, ... */
+}
+
+span{
+	border : 3px dotted red;
+	background : yellow;
+	padding : 20px;
+	width : 50%;
+}
+
+</style>
+</head>
+<body>
+
+<h3>인라인, 인라인 블록, 블록</h3>
+<hr/>
+나는 <div style="display:none">div(none)</div> 입니다.<br/><br/>
+<!-- dispaly:none은 해당 엘리먼트를 안보여줌(차지하던 면적도 제거) -->
+나는 <div style="display:inline">div(inline)</div> 입니다.<br/><br/>
+<!-- inline레벨로 즉, 일렬배치되고 크기를 지정할 수 있음 -->
+나는 <div style="display:inline-block; height:50px">div(inline-block)</div> 입니다.<br/><br/>
+<!-- 일렬배치되고 크기를 가질 수 있음 -->
+나는 <div>div<span style="display:block">span(block)</span> 입니다.</div>
+<!-- 블록레벨로 되어 세줄에서 시작, 100%넓이가 기본이며 크기 조절도 가능 -->
+</body>
+</html>

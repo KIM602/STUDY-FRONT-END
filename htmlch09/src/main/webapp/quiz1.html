@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>quiz1</title>
+<script type="text/javascript">
+
+
+</script>
+</head>
+<body>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p class="test"></p>
+<p class="test">s</p>
+<img id="image" src="media/puppy.png"><br/>
+<input type="text" id="myText" value="hello"><br/>
+<p id="demo4">글자색글자색</p>
+<button id ="demo5">click me1</button>
+
+
+<script type="text/javascript">
+// 1번
+document.getElementById("demo1").innerHTML = "hello1";
+// 2번
+document.getElementsByTagName("p")[1].innerHTML = "hello2";
+// 3번
+document.getElementsByClassName("test")[0].innerHTML="hello test";
+// 4번
+document.getElementById("image").src = "media/apple.png";
+// 5번
+document.getElementById("myText").value = "Hava a nice day!";
+// 6번
+document.getElementById("demo4").style.color = "red"; //css의 속성은 style속성을 이용하고 css의 프로퍼티 사용
+// 7번
+document.getElementById("demo4").style.fontSize = "40px";
+// 8번
+document.getElementById("demo5").onclick = function MyFunction(){ //()있으면 안됨
+	this.innerHTML = "클릭했어요";
+}
+// 9번
+var pTestArray = document.querySelectorAll("p.test");
+
+for(var i=0; i < pTestArray.length; i++) {
+	
+	var ptag = pTestArray[i];
+	ptag.style.color = "orchid";
+	ptag.innerHTML = "수정된 p태그 ";
+}
+	
+</script>
+</body>
+</html>
+<!-- 
+1. demo1을 선택하여 내용에 hello1을 작성
+2. p태그로 선택하여 그중 2번째 엘리먼트에 hello2를 작성
+3. 클래스 test를 선택하여 첫번째 엘리먼트에 hello test를 작성
+4. id="image"를 선택하여 apple.png로 교체하라
+5. id="myText"를 선택하여 입력값을 Hava a nice day!로 교체
+6. demo4를 선택하여 글자색 속성을 red로 변경
+7. demo4를 선택하여 글자의 크기를 40px로 변경
+8. demo5를 선택하여 click이벤트를 등록해주고 이벤트 처리 함수는 myFunction으로 한다(함수는 안만듬)
+9. 태그가 p이며 클래스가 test인 모든 엘리먼트를 css의 셀렉터를 이용하여 선택한다.
+
+
+ -->

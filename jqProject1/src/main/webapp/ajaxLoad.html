@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+<title>AjaxLoad</title>
+<!--bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--popper jquery-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!--latest javascript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div id="div1">
+	<h2>Let jQuery AJAX Change This Text</h2>
+</div>
+
+<button id="btn1">Get External Content</button>&nbsp;&nbsp;
+<button id="btn2">Get External Content일부</button>&nbsp;&nbsp;
+<button id="btn3">Get External Content와 콜백</button>&nbsp;&nbsp;
+
+<script>
+$(document).ready(function(){
+		$("#btn1").click(function(){
+			$("#div1").load("txt/demo_test.txt");
+			//ajax의 load(url,data,callback)메서드는 url의 문서를 로드해와 #div1의 내용에 출력
+			//원래 html은 변경이 일어나면 모든 내용을 서버로부터 가져와 다시 출력
+		});
+		
+		$("#btn2").click(function(){
+			$("#div1").load("txt/demo_test.txt #p1",{"key" : "value"})
+			//ajax의 load(url,data,callback)메서드는 url의 문서를 로드해와 #div1의 내용에 출력
+			//원래 html은 변경이 일어나면 모든 내용을 서버로부터 가져와 다시 출력
+			//data형태는 json형식으로 보냄 {"key" : "value"}
+		});
+		
+		$("#btn3").click(function(){
+			$("#div1").load("txt/demo_test.txt",function(responseTxt, statusTxt, xhr){
+				if(statusTxt == "success")
+					alert("External content loaded successfully!");
+				if(statusTxt == "error")
+					alert("Error : " + xhr.status + " : " + xhr.statusTxt);
+			});
+			//ajax의 load(url,data,callback)메서드는 url의 문서를 로드해와 #div1의 내용에 출력
+			//원래 html은 변경이 일어나면 모든 내용을 서버로부터 가져와 다시 출력
+			//data형태는 json형식으로 보냄 {"key" : "value"}
+		});	
+});
+</script>
+</body>
+</html>

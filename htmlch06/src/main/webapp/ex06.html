@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex06-06</title>
+</head>
+<body>
+
+<h3>변수 선언, 전역/지역/블록 변수</h3>
+<hr/>
+<script>
+var x; //전역변수 x 선언, var로 선언해도 동일
+function f() { //함수선언문은 실행은 안되고 스택메모리에 저장됨
+	let y; //함수 f()내에서만 사용되는 지역변수 y 선언, var로 선언해도 동일
+	x = 10; //전역변수 x에 10저장
+	y = 20; //지역변수 y에 20저장
+	z = 30; //새로운 전역변수 z가 선언되고 30이 저장됨
+	if(y == 20) { //if문 사용은 자바와 동일
+		let b = 40; //if 블록에서만 사용되는 블록변수 b 선언(블록변수시는 let사용)
+		b++; //증감연산자도 자바와 동일
+		document.write("if블록 내 블록변수 b = " + b + "<br/>");
+	}
+	//이곳에서는 블록변수 b에 접근할 수 없음
+	//이곳에서는 변수 x,y,z에 모두 접근 가능
+	document.write("함수 f() 내 지역변수 y =" + y + "<br/>");
+	document.write("전역변수 x : " + this.x + "<br/>"); //동일 이름의 전역변수 호출은 this키워드 사용
+	document.write("로컬변수 x : " + x + "<br/>");
+}
+f(); //함수호출
+document.write("전역변수 x = " + x + "<br/>")
+document.write("전역변수 z = " + z);
+//이곳에서는 변수 x와 z만 접근 가능, 지역변수 y와 블록변수 b는 접근 불가
+</script>
+</body>
+</html>

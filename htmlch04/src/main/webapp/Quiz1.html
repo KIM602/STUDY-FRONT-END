@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Quiz1</title>
+</head>
+<body>
+<!-- name 써주기 -->
+<form>
+	<input type="radio" name="label" id="html" value="HTML" checked>
+	<label for="html">HTML</label><br/>
+
+	<input type="radio" name="label" id="CSS" value="CSS">
+	<label for="CSS">CSS</label><br/>
+
+	<input type="radio" name="label" id="Javascript" value="Javascript">
+	<label for="Javascript">Javascript</label>
+</form>
+<br/>
+
+<form>
+<label>콤보박스</label><br/>
+	<select name="지역" size="3" multiple>
+		<option value="1">서울</option>
+		<option value="2" selected>부산</option>
+		<option value="3">광주</option>
+		<option value="4">제주</option>
+		<option value="5">대구</option>
+	</select>
+</form>
+<br/>
+
+<label>스핀버튼</label><br/>
+	<input type="number" name="num" min="10" max="50" step="2" value="25"/><br/>
+<br/>
+
+<label>슬라이드 바</label><br/>
+	0<input type="range" name="range" min="0" max="100" value="50">100<br/>
+<br/>
+
+<form action="#" method="post" name="fo" enctype="multipart/form-data">
+		<label for="myfile">Select a multi file:</label>
+		<input type="file" id="myfile" name="myfile" multiple>
+</form>
+<br/>
+
+<form>
+	date : <input type="date" name="date" value="2022-06-01">
+</form>
+<br/>
+
+<form>
+	<input type="hidden" name="custId" value="3487">
+	<!-- type="hidden"은 브라우저상에는 안보이나 서버로 값을 보내야만 할 때 -->
+</form>
+<br/>
+
+<form>
+	<input type="email" name="e-mail" placeholder="id@host">
+</form>
+<br/>
+
+<form>
+<input type="text" name="name1" placeholder="이름을 입력하세요" readonly><br/>
+<!-- 브라우저에서 수정이나 입력은 안되나 submit시 서버로 데이터는 전송 -->
+<input type="text" name="name2" placeholder="이름을 입력하세요" disabled><br/>
+<!-- 브라우저에서 수정이나 입력은 안되고 submit시 서버로 데이터도 전송 안됨 -->
+<input type="text" name="name3" placeholder="이름을 입력하세요" required>
+<!-- 입력 필수항목으로 입력 안하면 에러 -->
+</form>
+<br/>
+
+<form>
+<input type="text" name="name4" placeholder="이름을 입력하세요">
+<!-- autofocus는 해당 입력요소로 이동 -->
+<input type="text" name="name5" placeholder="이름을 입력하세요" autofocus>
+</form>
+</body>
+</html>
+
+<!--
+1. label태그와 입력태그요소를 분리하여 캡션 적용
+    input태그는 radio이며 3개의 radio를 갖는다.
+    캡션은 각각 HTML, CSS, Javascript로 하며 value값도 캡션값으로 하여 작성
+2. 콤보박스를 만드는데 항목은 서울, 부산, 광주, 제주, 대구로 하고 사전 선택은 부산이며 여러개 선택 되도록 한다.
+3. 스핀버튼이 생성되는 type가 number인 최소 10부터 최대 50까지 간격은 2씩 증가하도록 한다.
+4. 크기가 0부터 100인 슬라이드 바를 만들어 본다.
+5. file업로드를 위한 입력창을 만들고 복수개가 선택 가능하도록 한다.
+6. date를 처리하는 입력창을 만든다. 초기값은 오늘 날짜로 한다.
+7. type="hidden"인 입력창을 name="custId" value="3487"을 이용하여 만든다.
+8. 이메일을 입력하는데 사용되는 입력창 만들기
+9. 한줄 문자입력창을 만들고 힌트로 이름을 입력하세요를 넣는다.
+10. 한줄 문자입력창을 만들고 힌트로 이름을 입력하세요를 넣고 readonly속성을 사용해 본다.
+11. 한줄 문자입력창을 만들고 힌트로 이름을 입력하세요를 넣고 disabled속성을 사용해 본다.
+12. 한줄 문자입력창을 만들고 힌트로 이름을 입력하세요를 넣고 required속성을 사용해 본다.
+13. 한줄 문자입력창을 2개 만들고 힌트로 이름을 입력하세요를 넣고 둘중 하나에 autofocus속성을 사용해본다.
+ -->

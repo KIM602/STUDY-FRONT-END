@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex03-11</title>
+</head>
+<body>
+
+<h3>오늘 점심은?</h3>
+<hr/>
+<!-- select는 드롭다운리스트(콤보박스)로 처리하는 입력 요소, 리스트 항목은 option태그로 처리, 면적을 적게 차지 -->
+<!-- select는 인라인레벨 태그 -->
+<select name="china"> <!-- multiple속성이 없으면 단일 선택 -->
+	<option value="1">짜장면</option> <!-- 콘텐츠에 있는 짜장면이 보이고 선택시에 값은 1임 -->
+	<option value="2" selected>짬뽕</option> <!-- selected는 사전선택(초기선택) -->
+	<option value="3">탕수육</option>
+</select>
+<br>
+
+<select name="korean" multiple size="3"> <!-- multiple속성이 없으면 단일 선택다중선택시는 Ctrl키 누르고 size는 화면에 보이는 항목 수 -->
+	<option value="1">백반</option> <!-- 콘텐츠에 있는 짜장면이 보이고 선택시에 값은 1임 -->
+	<option value="2" selected>갈비탕</option> <!-- selected는 사전선택(초기선택) -->
+	<option value="3">육계장</option>
+	<option value="4">초계탕</option>
+	<option value="5">설렁탕</option>
+</select>
+</body>
+</html>

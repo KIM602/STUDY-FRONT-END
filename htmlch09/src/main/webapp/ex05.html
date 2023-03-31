@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>ex09-05</title>
+</head>
+<body>
+<h3>event객체</h3>
+<hr/>
+<p id ="p">마우스를 올려보세요</p>
+<button onclick="f(event)">클릭하세요</button>
+<!-- event는 객체명이 event로 자바스크립트제공 객체임-->
+<script type="text/javascript">
+function f(e) {
+	alert(e.type); // 이벤트 종류 출력
+}
+document.getElementById("p").onmouseover = f; // DOM의 이벤트리스너 속성으로 사용시는 함수 이름만 작성
+</script>
+</body>
+</html>

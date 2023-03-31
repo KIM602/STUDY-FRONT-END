@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Quiz1</title>
+</head>
+<body>
+
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+<p id="p5"></p>
+<p id="p6"></p>
+<p id="p7"></p>
+<p id="p8"></p>
+<p id="p9"></p>
+
+<script>
+var d = new Date();
+document.getElementById("p1").innerHTML = d;
+document.getElementById("p2").innerHTML = d.getFullYear() + "년도<br/>";
+document.getElementById("p3").innerHTML = d.getMonth() + 1 + "월<br/>";
+document.getElementById("p4").innerHTML = d.toLocaleTimeString() +" 입니다.";
+
+let msce = Date.parse("2022-03-25");
+document.getElementById("p5").innerHTML = msce;
+// 날짜의 문자열 표현을 구문 분석하고 1970 년 1 월 1 일 00:00:00 UTC 이후의 밀리 초 수를 반환함
+// 문자열이 인식되지 않거나 경우에 따라 잘못된 날짜 값을 포함하는 경우 NaN을 반환
+
+let fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+document.getElementById("p6").innerHTML = fruits.sort();
+
+document.getElementById("p7").innerHTML = fruits.length;
+
+function person() {
+		this.fName = "yu kyeong ",
+		this.lName = "Kim",
+		this.id = "0608",
+		this.fullname = function() {
+			return this.fName + this.lName;
+		}
+};
+
+var f = new person();
+document.getElementById("p8").innerHTML = f.fName;
+document.getElementById("p9").innerHTML = f.fullname();
+</script>
+</body>
+</html>
+
+<!-- 
+1. 현재 시각 정보를 지닌 객체 d를 만들고 id="p1"에 출력
+2. d에서 년도를 얻어서 p2에 출력
+3. d에서 월을 얻어서 p3에 출력
+4. d에서 시간을 얻어서 p4에 출력
+5. let msec = Date.parse("2022-03-25");를 사용하여 p5에 출력하고 그 값의 의미를 알아보라
+6. "Banana", "Orange", "Apple", "Kiwi"를 원소값으로 갖는 배열 fruits를 만들고 오름차순으로 정렬하여 p6에 출력
+7. fruits의 원소개수를 p7에 출력
+8. 객체형 변수 person을 만드는데 속성은 fName, lName, id이며 값은 임의로 집어넣는다.
+    메서드는 fullName이며 블록의 내용은 fName과 lName을 결합한 값을 반환한다.
+    만든 후 fName을 p8에 출력하고 메서드를 호출한 값을 p9에 출력
+ -->

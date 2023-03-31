@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex10-04</title>
+</head>
+<body>
+
+<h3>텍스트가 자동 회전하며, 마우스로 클릭하면 중단합니다.</h3>
+<hr/>
+<div>
+	<span id="span" style="background-color:yellow">자동회전하는 텍스트입니다.</span>
+</div>
+</body>
+<script>
+let span = document.getElementById("span");
+let timerID = setInterval("doRotate()",200); //200밀리초 주기로 doRotate 함수 사용(이름)
+//setInterval("doRotate()",200); //함수 호출 방식
+span.onclick = function(e) {
+	//DOM객체에 이벤트리스너 등록
+	clearInterval(timerID); //타이머 해제, 문자열 회전 중단
+}
+
+function doRotate() {
+	let str = span.innerHTML;
+	let firstChar = str.substr(0,1); //str에서 0번에서 하나 추출
+	let remains = str.substr(1, str.length-1); //1번에서 나머지 개수 추출
+	str = remains + firstChar;
+	span.innerHTML = str; //str텍스트를 span객체에 출력
+}
+</script>
+</html>

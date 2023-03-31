@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex05-07</title>
+<style>
+span {
+	visibility:hidden; /* 해당 공간은 차지하고 있음. 기본은 visible, table의 줄은 collapse값 사용 */
+}
+table, td {
+	border: 1px solid black;
+}
+tr.collapse {
+	visibility: collapse; /* hidden은 줄만 없애고 테이블 테두리는 남음 */
+}
+
+</style>
+</head>
+<body>
+
+<h3>다음 빈 곳에 숨은 단어?</h3>
+<hr/>
+
+<ul>
+	<li>I (<span>love</span>) you.</li>
+	<li>CSS is Cascading (<span>Style</span>) Sheet.</li>
+	<li>응답하라 (<span>1988</span>).</li>
+</ul>
+<br/>
+<table>
+	<tr>
+		<td>Peter</td>
+		<td>Griffin</td>
+	</tr>
+	<tr class="collapse">
+		<td>Loid</td>
+		<td>kook</td>
+	</tr>
+</table>
+</body>
+</html>

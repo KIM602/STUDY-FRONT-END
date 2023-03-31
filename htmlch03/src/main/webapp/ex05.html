@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>ex03-05</title>
+</head>
+<body>
+
+<h3> 로그인 폼</h3>
+<hr/>
+<!-- web form을 만들기 위해서는 form 콘테이너 만에 입력 요소들을 구현 -->
+<!-- form태그의 기본 속성 -->
+<form action="#" method="POST" name="fo"> <!--  action은 서버의 주소로 보내라  -->
+<!--  method는 통신 방식 -->
+	사용자 ID : <input type="text" size="15" value = "id"/>  <!-- 크기가 15인 한줄 입력 창 // value는 초기값을 의미함 -->
+	비밀번호 : <input type = "password" size = "15" value = "" /> <!-- 크기가 15면 비밀번호입력창, 입력내용 안보임 -->
+	<input type="submit" value="완료" /> <!-- submit은 입력한 내용을 서버로 요청하는 버튼 즉 form action= 으로 보냄 // value는 버튼 명-->
+	<!--  input태그는 type으로 종류를 구별,input은 인라인 태그임 -->
+	
+</form>
+
+<hr/>
+<!--  method= "get" 방식은 디폴트로 생략 가능하며 주로 보안이 필요 없을시 사용, 주소창에 요청 내역이 보임 -->
+<!--  target속성은 기본이 self이므로 자기창에 출력 -->
+<form name = "sform" action="https://search.naver.com/search.naver" method="get">
+	<!--  name은 서버로 보낼시 속성으로 서버에서는 이값을 기준으로 내용을 판단 ?query=입력값  --> 
+	<input name = "query" type="text">
+	<input type = "submit" value = "검색">
+
+</form>
+
+</body>
+</html>

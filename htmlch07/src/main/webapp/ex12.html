@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex07-12</title>
+</head>
+<body>
+
+<h3>JavaScript Object Constructors</h3>
+<hr/>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+//Person생성자 함수
+function Person(first, last, age, eye) {
+	//프로퍼티 설정
+		this.firstName = first;
+		this.lastName = last;
+		this.age = age;
+		this.eyeColor = eye;
+}
+
+Person.prototype.nationality = "English"; //Person생성자 함수 객체에 프로퍼티 nationality를 추가
+Person.prototype.name = function() {
+	return this.firstName + " " + this.lastName;
+}
+let myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+		"The nationality of my father is " + myFather.nationality + " fullName "+ myFather.name();
+const myMother = new Person("kim","soon",45,"blue");
+document.getElementById("demo1").innerHTML =
+	"The nationality of my mother is " + myMother.nationality + " fullName "+ myMother.name();
+</script>
+</body>
+</html>

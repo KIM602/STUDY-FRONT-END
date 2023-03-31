@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Quiz2</title>
+<style>
+#para1 {
+	text-align : center;
+	color : red;
+}
+
+.center {
+	text-align : center;
+	color : red;
+}
+
+h2, h3, h4 {
+	text-align : center;
+	color : red;
+}
+
+div > p {
+	background : yellow;
+}
+
+#para1:hover {
+	background : hotpink;
+}
+
+h1 {
+	border-style : solid;
+	border-width : 2px;
+	border-color : green;
+}
+</style>
+</head>
+<body>
+
+<p id="para1">
+Hello World
+</p>
+
+<h1 class="center">
+Red and center-aligned heading
+</h1>
+
+<p class="center">
+Red and center-aligned heading
+</p>
+
+<h2>hello world</h2>
+<h3>hello world</h3>
+<h4>hello world</h4>
+
+<div>
+	<p>Paragraph 1 in the div.</p>
+	<p>Paragraph 2 in the div.</p>
+</div>
+
+</body>
+</html>
+
+<!--
+1. id속성이 paral인 p태그 엘리먼트를 만들고 내용은 Hello World로 한다.
+   인터널 스타일로 id가 paral인 엘리먼트를 선택하여 스타일속성 문자열정렬은 중앙정렬하고 글자색은 red로 한다.
+2. class속성이 center인 h1태그 엘리먼트를 만들고 content를 Red and center-aligned heading
+    class속성이 center인 p태그 엘리먼트를 만들고 content를 Red and center-aligned heading
+    인터널 스타일로 클래스가 center인 엘리먼트를 선택하여 스타일속성 문자열정렬은 중앙정렬하고 글자색은 red로 한다.
+3. h2, h3, h4태그로 hello world콘텐츠를 갖는 엘리먼트를 만들고 3개의 태그에 모두 적용되는 인터널 스타일로
+   스타일속석 문자열정렬은 중앙정렬하고 글자색은 red로 한다. (그룹핑 셀렉터라 부름)
+4. div태그엘리먼트안에 <p>Paragraph 1 in the div.</p>, <p>Paragraph 2 in the div.</p>
+   두개를 만들어 놓고 자식관계를 엘리먼트를 선택하는 인터널 스타일을 만들어 속성은 배경을 노란색으로 정한다.
+5. id가 paral인 엘리먼트 위에 마우스를 갖다 댈 시에 배경색이 hotpink로 되도록 가상 클래스를 만든다.
+6. 테두리를 꾸미는 단축형을 사용하여 태그 h1인 엘리먼트에 두께 2px 실선 녹색인 테두리를 만든다.
+ -->

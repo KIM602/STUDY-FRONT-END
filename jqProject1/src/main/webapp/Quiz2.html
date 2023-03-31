@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+<title>Quiz2</title>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Popper Js-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- latest Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<button id="btn1">1번</button>
+<button id="btn2">2번</button>
+<button id="btn3">3번</button>
+<button id="btn4">4번</button>
+<button id="btn5">5번</button>
+<button id="btn6">6번</button>
+<button id="btn7">7번</button>
+<button id="btn8">슬라이드 업용</button>
+
+
+<div id="div1">1~2번용</div>
+<div id="div2">3번용</div>
+<div id="div3">4번용 ,6~7번용</div>
+<div id="div4" style="background: red">5번용</div>
+
+
+<script type="text/javascript">
+	//1번
+$(document).ready(function () {
+	$("#btn1").click(function () {
+		$("#div1").fadeOut(2000);
+	})
+	//2번
+	$("#btn2").click(function () {
+		$("#div1").fadeTo("slow",0.2);
+	})
+	//3번
+	$("#btn3").click(function () {
+		$("#div2").fadeToggle(1000);
+	})
+	// 4번
+	$("#btn4").click(function () {
+		$("#div3").slideToggle(3000);
+	})
+	// 5번
+	$("#btn5").click(function () {
+		$("#div4").animate({
+			opacity: "0.5",
+			height: "500px",
+			width: "500px"
+		})
+	})
+	// 6번
+	$("#btn6").click(function () {
+		$("#div3").stop();
+	})
+	
+	
+	// 7번
+	$("#btn7").click(function () {
+		$("#div3").slideDown(3000,function(){
+			alert("end");
+		})
+	})
+	
+	$("#btn8").click(function () {
+		$("#div3").slideUp();
+	})
+	
+})
+
+</script>
+
+</body>
+</html>
+
+<!-- 
+1. button태그를 클릭시에 div엘리먼트를 fade로 사라지게함 (속도는 2초)
+2. button태그를 클릭시에 div엘리먼트를 불투명도 0.2를 가지고 보이게 함 (속도는 slow로)
+3. button 태그를 클릭시에 div엘리먼트를 반복해서 fade하게함(속도는 1초)
+4. button 태그를 클릭시에 div엘리먼트를 반복해서 슬라이드 하게 함(속도는 3초)
+5. btuuon 태그를 클릭시에 div엘리먼트의 불투명도를 0.5, 높이를 500px, 넓이500px로 animate  
+6. div엘리먼트에 slideUP효과가 진행되고 있다고 가정하고 현재 상태에서 멈추게함
+7. div엘리먼트가 3초에 걸쳐 slidedown되고 있다고 가정하고 slidedown이 완전히 끝난뒤 alert("end")를 실행하기               
+
+
+ -->

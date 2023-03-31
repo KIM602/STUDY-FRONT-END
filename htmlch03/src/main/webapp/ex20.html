@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex03-20</title>
+</head>
+<body>
+
+<h3>type="file"</h3>
+<hr/>
+
+<!-- 하나의 파일만 선택 -->
+<form action="#" method="post" name="fo" enctype="multipart/form-data">
+		<label for="myfile">Select a file:</label>
+		<input type="file" id="myfile" name="myfile"><br/><br/>
+		<input type="submit">
+</form>
+
+<br/><br/>
+<!-- 복수 파일 선택 -->
+<form action="#" method="post" name="fo1" enctype="multipart/form-data">
+		<label for="myfile1">Select a multi file:</label>
+		<input type="file" id="myfile1" name="myfile1" multiple><br/><br/> <!-- 복수개 선택시는 ctrl누르고 선택 -->
+		<input type="submit">
+</form>
+</body>
+</html>

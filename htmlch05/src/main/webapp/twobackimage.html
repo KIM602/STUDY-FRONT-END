@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>두개의 배경 이미지 사용</title>
+<style>
+#example1 {
+	/* 두개 이상 사용시는 각 프로퍼티값을 ,로 구분하여 작성하고 이미지의 순서에 맞추어 다른 속성도 작성 */
+	background-image: url(https://www.w3schools.com/css/img_flwr.gif),url(https://www.w3schools.com/css/paper.gif);
+	background-position: right bottom, left top;
+	background-repeat: no-repeat, repeat; /* repeat는 수평 수직 다 채울때까지 반복 */
+	padding: 15px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Multiple Backgrounds</h1>
+<p>The following div element has two background images:</p>
+
+<div id="example1">
+	<h1>두개의 백그라운드 이미지 사용</h1>
+	<p>가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라</p>
+	<p>가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라</p>
+</div>
+</body>
+</html>

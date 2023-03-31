@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+<title>NAV</title>
+<!--bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--popper jquery-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!--latest javascript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h2>Toggleable Tabs(토글되는 또는 다이내믹)</h2>
+	<!-- nav tab -->
+	<ul class="nav nav-tabs" role="tablist">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#home">Home</a> <!-- id로 이동 -->
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+		</li>
+	</ul>
+	
+	<div class="tab-content"> <!-- tab별 내용을 수용하는 콘테이너 -->
+		<div id="home" class="container tab-pane active"> <!-- tab-pane은 각 메뉴 내용, active는 보이는 상태 -->
+			<br />
+			<h3>HOME</h3>
+			<p>짱구야 노올자 천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루 우리의 짱구는 정말 못말려 짱구양~~!!
+			</p>
+		</div>
+		
+		<div id="menu1" class="container tab-pane fade"> <!-- tab-pane은 각 메뉴 내용, fade는 안보이는 상태 -->
+			<br />
+			<h3>Menu 1</h3>
+			<p>짱구야 노올자 천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루 우리의 짱구는 정말 못말려 짱구양~~!!
+			</p>
+		</div>
+		
+		<div id="menu2" class="container tab-pane fade"> <!-- tab-pane은 각 메뉴 내용, fade는 안보이는 상태 -->
+			<br />
+			<h3>Menu 2</h3>
+			<p>짱구야 노올자 천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루 우리의 짱구는 정말 못말려 짱구양~~!!
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<h2>Toggleable Pills(active시 파란 바탕색 메뉴)</h2>
+	<br />
+	<ul class="nav nav-pills" role="tablist">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="pill" href="#home1">Home</a> <!-- id로 이동 -->
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="pill" href="#menu11">Menu 1</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="pill" href="#menu21">Menu 2</a>
+		</li>
+	</ul>
+	
+	<div class="tab-content"> <!-- tab별 내용을 수용하는 콘테이너 -->
+		<div id="home1" class="container tab-pane active"> <!-- tab-pane은 각 메뉴 내용, active는 보이는 상태 -->
+			<br />
+			<h3>HOME</h3>
+			<p>짱구야 노올자 천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루 우리의 짱구는 정말 못말려 짱구양~~!!
+			</p>
+		</div>
+		
+		<div id="menu11" class="container tab-pane fade"> <!-- tab-pane은 각 메뉴 내용, fade는 안보이는 상태 -->
+			<br />
+			<h3>Menu 1</h3>
+			<p>짱구야 노올자 천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루 우리의 짱구는 정말 못말려 짱구양~~!!
+			</p>
+		</div>
+		
+		<div id="menu21" class="container tab-pane fade"> <!-- tab-pane은 각 메뉴 내용, fade는 안보이는 상태 -->
+			<br />
+			<h3>Menu 2</h3>
+			<p>짱구야 노올자 천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루 우리의 짱구는 정말 못말려 짱구양~~!!
+			</p>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

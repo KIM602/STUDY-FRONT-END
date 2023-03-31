@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<!-- RWD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- MS -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9"/>
+<title>ADD메서드들</title>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Popper Js-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- latest Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<base href="https://www.w3schools.com">
+</head>
+<body>
+
+<h3>내용 또는 엘리먼트 추가</h3>
+
+<p>This is a para</p>
+<p>This is a para</p>
+
+<ol>
+	<li>List item 1</li>
+	<li>List item 2</li>
+	<li>List item 3</li>
+
+</ol>
+
+<img src="/images/w3jquery.gif"><br/>
+
+<button id="btn1">Append Text</button> &nbsp;&nbsp;
+<button id="btn2">Append list items</button> &nbsp;&nbsp;
+<button id="btn3">prepend text</button> &nbsp;&nbsp;
+<button id="btn4">prepent list items</button> &nbsp;&nbsp;
+<button onclick="appendText()">append dom</button> &nbsp;&nbsp;
+<button id="btn5">before</button> &nbsp;&nbsp;
+<button id="btn6">after</button> &nbsp;&nbsp;
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#btn1").click(function () {
+		$("p").append(" <b>Appenede text</b>.") // p태그의 마지막 뒤에 붙이기
+	})
+	$("#btn2").click(function () {
+		$("ol").append(" <li>Appenede item</li>.") // ol태그의 마지막 뒤에 붙이기
+	})
+	$("#btn3").click(function () {
+		$("p").prepend(" <b>prepended text</b>.") // p태그의 앞에 붙이기  
+	})
+	$("#btn4").click(function () {
+		$("ol").prepend(" <li>prepended item</li>.") //  ol태그의 앞에 붙이기
+	})
+	$("#btn5").click(function () {
+		$("img").before("<b>Before</b>");
+	})
+	$("#btn6").click(function () {
+		$("img").after("<i>AFter</i>");
+	})
+	
+})
+
+function appendText() {
+	let txt1 = "<p>Text.</p>"; // html 문법으로 dom객체 변수 만듬
+	let txt2 = $("<p></p>").text("text"); //  jquery로 dom객체 변수 만듬
+	let txt3 = document.createElement("p"); // js로 dom객체 변수 만듬
+	txt3.innerHTML = "Text";
+	$("body").append(txt1,txt2,txt3); // append(dom1,dom2,dom3...)메서드로 객체가 나타내는 엘리먼트를 붙이기
+}
+
+
+
+
+</script>
+
+</body>
+</html>

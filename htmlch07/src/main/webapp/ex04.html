@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex07-04</title>
+<script>
+	function pr(msg, arr) {document.write(msg + arr.toString() + "<br/>");}
+	//배열객체.toString()은 배열 원소를 ,로 구분하며 문자열로 변환 반환
+</script>
+</head>
+<body>
+
+<h3>Array 객체의 메소드 활용</h3>
+<hr/>
+
+<script>
+let a = new Array("황","김","이");
+let b = new Array("박");
+let c;
+
+pr("배열 a =", a);
+pr("배열 b =", b);
+document.write("<hr/>")
+
+c = a.concat(b); //c는 a와 b를 연결한 새 배열, concat()는 배열 연결 메서드
+pr("c = a.concat(b)후 c =", c);
+pr("c = a.concat(b)후 a = ", a);
+
+c = a.join("##"); //c는 배열 a를 연결한 문자열, join(구분문자열)은 배열 원소를 구분 문자열로 구분한 문자열로 반환
+pr("c = a.join() 후 c =", c);
+pr("c = a.join() 후 a =", a);
+
+c = a.reverse(); //a.reverse()로 a 자체 변경, c는 배열
+pr("c = a.reverse() 후 c =", c);
+pr("c = a.reverse() 후 a =", a);
+
+c = a.slice(1, 2); //c는 새 뱇배열
+pr("c = a.slice(1, 2) 후 c =", c); //slice(start, end)는 start색인번호에서 end-1색인번호까지 원소 추출
+pr("c = a.slice(1, 2) 후 a =", a); //자체는 변경 안됨
+
+c = a.sort(); //a.sort()는 a 자체 변경, c는 배열, sort()는 오름차순 정렬
+pr("c = a.sort() 후 c =", c);
+pr("c = a.sort() 후 a =", a);
+
+c = a.toString(); //toString()은 원소 사이에 ","를 넣어 문자열 생성
+document.write("a.toString() :"+ c); //c는 문자열
+</script>
+</body>
+</html>

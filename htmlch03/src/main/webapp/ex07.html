@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>ex03-07</title>
+<style>
+input {
+	padding : 10px;
+}
+</style>
+</head>
+<body>
+
+<h3>가보고 싶은 곳</h3>
+<hr/>
+
+<form action="#" method="POST" name="fo">
+	나라 : <input type="text" name="country" list="countries"/> <br/>
+		<datalist id="countries"> <!-- list속성과 id 속성값을 매핑 -->
+			<!--  datalist의 각 항목은 option 태그 사용 -->
+			<option value="가나"></option>
+			<option value="스위스"></option>
+			<option value="브라질"></option>
+		</datalist>
+	보고싶은 것 : <input type="text" name="wantsee" list="what"/> <br/>
+		<datalist id="what"> <!-- list속성과 id 속성값을 매핑 -->
+			<option value="산"></option>
+			<option value="바다"></option>
+			<option value="도시"></option>
+		</datalist>
+
+</form>
+
+</body>
+</html>

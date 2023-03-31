@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex03-01</title>
+
+<!-- css는 페이지 전체에서 사용하게 하려면 head에 style태그안에 만듬 -->
+<!-- css는 선택자로 적용할 엘리먼트를 선택하고 {  }안에 속성(property)이름 : 속성값;으로 작성 -->
+<style>
+html, body { /* html.body는 태그명으로 css를 정욕할 엘리먼트를 선택하는 선택자 */
+	/*  브라우저별로 다른 디폴트 값을 통합 */
+	margin: 0px; /* 외부여백 0은 단위 px생략 가능 */
+	padding: 0; /* 내부영역 */
+	height: 100%; /* 브라우저에서 내용이 표시될 최대 높이 */
+}
+header {
+	width: 100%;
+	height: 15%;
+	background-color: yellow;
+}
+nav {
+	width: 15%;
+	height: 70%;
+	float: Left; /* 블록레벨을 왼쪽을 기준으로 한줄에 정렬 */
+	background-color: orange;
+}
+section {
+	width: 70%;
+	height: 70%;
+	float: Left;
+	background: olivedrab;
+}
+aside {
+	width: 15%;
+	height: 70%;
+	float: Left;
+	background-color: orange;
+}
+footer {
+	width: 100%;
+	height: 15%;
+	clear: both; /* 다른 것들은 일렬 배치를 해제 */
+	background: plum;
+}
+</style>
+</head>
+<body>
+
+<!-- 아래의 태그는 시맨틱태그로 블록레벨 -->
+<header style="border:1px solid red">header</header>
+<nav>nav</nav>
+<section>section</section>
+<aside>aside</aside>
+<footer>footer</footer>
+</body>
+</html>

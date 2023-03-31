@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#" method="post" name="fo">
+	name : <input type="text" name="name" maxlength="8" value="kook"><br/>
+	비번 입력창 : <input type="password" name="pw"><br/>
+	지역 : <input type="text" name="area" list="areas"/>
+		<datalist id="areas">
+			<option value="서울"></option>
+			<option value="부산"></option>
+			<option value="광주"></option>
+		</datalist><br/>
+
+
+	
+	독서<input type="checkbox" name="hobby" value="1">
+	조깅<input type="checkbox" name="hobby" value="2">
+	영화<input type="checkbox" name="hobby" value="3">
+	음악<input type="checkbox" name="hobby" value="4">
+
+	<br/>
+	한국<input type="radio" name="country" value="1">
+	미국<input type="radio" name="country" value="2">
+	일본<input type="radio" name="country" value="3">
+	중국<input type="radio" name="country" value="4">
+	<br/>
+	
+	<input type="submit" value="전송">
+	<input type="reset" value="초기화버튼">
+			
+</form>
+
+</body>
+</html>
+
+
+<!-- 
+1. form콘테이너를 필요 속성을 포함하여 만듬
+2. 한줄 문자열 입력창을 요소이름을 name으로 하고 초기값은 kook으로 하고 최대 문자입력 개수는 8로 한다
+3. 비번 입력창을 name속성을 pw로 하여 만듬
+4. type text창과 list가 결합된 창을 만들고 선택 내용은 서울,부산,광주로 한다
+5. 독서,조깅,영화,음악을 다중 선택 가능한 창으로 만든다 ( 단 서버로 보낼 값은 1,2,3,4로 한다)
+6. 한국,미국,일본,중국 중에 베타적인 선택이 되도록 창을 만든다 요소이름은 country로 하고 서버 전달값은 1,2,3,4로 한다
+7. 입력된 값을 서버로 전송하는 버튼을 만든다.
+8. 입력 내용을 취소하는 버튼을 만든다.
+ -->

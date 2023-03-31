@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex06-23</title>
+<script>
+function evalParseIntIsNaN() {
+	//js의 전역 함수는 window객체에 속한 메서드로 window를 생략하고 사용하며 함수라 칭한다
+	let res = eval("2*3+4*6"); //eval함수는 파라메터의 수식어 숫자형식일 때 이를 숫자로 계산한다. res는 30
+	document.write("eval(\"2*3+4*6\")는 " + res + "<br/>");
+	let m = parseInt("32"); //숫자형의 문자열을 정수로 변환
+	document.write("parseInt(\"32\")는 " + m + "<br>");
+	let n = parseInt("0x32"); //16진수 형식의 문자열을 10진수 숫자로 변환 
+	document.write("parseInt(\"0x32\")는 " + n + "<br><br>");
+	
+	// "hello"는 정수로 변환할 수 없으므로 parseInt("hello")는 NaN 리턴
+	n = parseInt("hello"); 
+	if(isNaN(n)) // true
+		document.write("hello는 숫자가 아닙니다.");
+
+}
+</script>
+</head>
+<body>
+
+<h3>eval(), parseInt(), isNaN()</h3>
+<hr/>
+
+<script>
+evalParseIntIsNaN(); //함수 호출
+</script>
+</body>
+</html>

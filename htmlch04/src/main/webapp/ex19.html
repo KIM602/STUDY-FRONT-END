@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ex04-19</title>
+<style>
+div { 
+	font : normal 24px verdata; /* 단축형 font-style(normal, italic, oblique), font-weight(미사용), font-size, font-family를 단축하여 사용 */
+}
+
+.dropText {
+	text-shadow : 3px 3px; /* h-shadow(수평이격거리), v-shadow(수직이격거리) */
+}
+
+.redText { 
+	text-shadow : 3px 3px red; /* red는 그림자 color */
+}
+
+.blurText {
+	text-shadow : 3px 3px 5px skyBlue; /* 5px는 blur거리로 그림자 뭉그러짐 */
+}
+
+.glowEffect { /* 본 글자 뒤에서 불꽃처럼 보이게 그림자 줌 */
+	text-shadow : 0px 0px 3px red;
+}
+
+.wordArtEffect { /* 워드아트 형태 글자로 씀*/
+	color : white;
+	text-shadow : 0px 0px 3px darkBlue;
+}
+
+.threeDEffect { /* 3d효과 */
+	color : white;
+	text-shadow : 2px 2px 4px black;
+}
+
+.multiEffect { /* 3개의 효과 동시 적용 */
+	color : yellow;
+	text-shadow : 2px 2px 2px black,
+					0 0 25px blue,
+					0 0 5px darkblue;
+}
+</style>
+</head>
+<body>
+
+<h3>텍스트 그림자 만들기</h3>
+<hr/>
+<div class="dropText">Drop Shadow</div>
+<div class="redText">Color Shadow</div>
+<div class="blurText">Blur Shadow</div>
+<div class="glowEffect">Glow Effect</div>
+<div class="wordArtEffect">WordArt Effect</div>
+<div class="threeDEffect">3D Effect</div>
+<div class="multiEffect">Multiple Shadow Effect</div>
+</body>
+</html>
